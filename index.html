@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyd extension</title>
+
+    <link rel="stylesheet" href="public/css/main.css">
+
+    <script src="public/js/jquery-2.1.4.js"></script>
+    <script src="public/js/functions.js"></script>
+    <script src="public/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header-options" class="options-btn">
+            <img title="Configurações" alt="Configurações" src="public/images/icons/ic_settings_white_24dp_1x.png" alt="Settings" id="settings-btn" style="cursor: pointer">
+        </div>
+        <!--<div id="logo">
+            <a href="http://keyd.com.br/stars" target="_blank">
+                <img src="public/images/logo_keyd.png" alt="Keyd logo" width="70px">
+            </a>
+        </div>-->
+    </header>
+    
+    <div id="search-result" style="display: none">
+        <div style="padding: 5px"><b>Resultado</b></div>
+        <div id="search-channels"><div style="padding: 5px">Nada encontrado</div></div>
+    </div>
+
+    <nav>
+        <li class="current" data-open="#channels #online">Online</li>
+        <li data-open="#channels #all">Todos</li>
+        <!--<li data-open="#giveaways">Sorteios</li>-->
+        <div style="clear: both"></div>
+    </nav>
+
+    <main>
+        <section id="channels">
+            <article id="online" class="tab">
+                <div style="padding: 10px">Nenhum canal está online no momento</div>
+            </article>
+
+            <article id="all" style="display: none" class="tab">
+                <div class="channel-list"></div>
+                <div style="clear: both"></div>
+            </article>
+        </section>
+
+        <!--<section class="tab" id="giveaways">
+        </section>-->
+
+        <section class="tab" id="settings-tab" style="display: none">
+            <div id="title">Configurações</div>
+
+            <article id="notifications" class="settings-article">
+                <div class="settings-article-title">
+                    Notificações
+                </div>
+                <div class="settings-field">
+                    <input type="checkbox" id="notifications-on"><label for="notifications-on">Ligadas</label>
+                </div>
+                <div class="settings-field">
+                    <input type="checkbox" id="notifications-sound"><label for="notifications-sound">Som</label>
+                </div>
+                <div class="settings-field">
+                    <label for="notifications-sound-volumn">Volume</label><br />
+                    <input type="range" id="notifications-sound-volumn">
+                    <span id="percent"></span>
+                </div>
+                <div class="settings-article-title">
+                    Oldschool
+                </div>
+                <div class="settings-field">
+                    <input type="checkbox" id="oldschool"><label for="oldschool">Ligado</label>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
